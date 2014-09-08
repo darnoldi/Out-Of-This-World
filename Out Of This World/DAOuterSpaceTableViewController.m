@@ -9,6 +9,7 @@
 #import "DAOuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "DASpaceObject.h"
+#import "DASpaceImageViewController.h"
 
 @interface DAOuterSpaceTableViewController ()
 
@@ -48,24 +49,22 @@
         
     }
     
+
     
-    
-//    NSMutableDictionary *myDictionary = [[NSMutableDictionary alloc]init];
-//    NSString *firstColor = @"Red";
-//    [myDictionary setObject:firstColor forKey:@"firetruck color"];
-//    [myDictionary setObject:@"Blue" forKey:@"ocean color"];
-//    [myDictionary setObject:@"Yellow" forKey:@"star color"];
-//    NSLog(@"%@",myDictionary);
-//    
-//    
-//    NSString *blueString = [myDictionary objectForKey:@"ocean color"];
-//    NSLog(@"%@",blueString);
-    
-    
-    NSNumber *myNumber = [NSNumber numberWithInt:5];
-    NSLog(@"%@",myNumber);
-    
-    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[DASpaceImageViewController class]])
+        {
+            DASpaceImageViewController *nextViewController = segue.destinationViewController;
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            DASpaceObject *selectedObject = [self.planets objectAtIndex:path.row];
+            nextViewController.spaceObject = selectedObject;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,14 +77,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return [self.planets count];
 

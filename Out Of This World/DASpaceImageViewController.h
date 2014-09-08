@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DASpaceObject.h"
 
 @interface DASpaceImageViewController : UIViewController <UIScrollViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic)  UIImageView *imageView;
-
+@property (strong, nonatomic) DASpaceObject *spaceObject;
 
 @end
