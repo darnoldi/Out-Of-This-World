@@ -30,6 +30,7 @@
 		0F1288D419B33A3700962710 /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F1288CA19B33A3700962710 /* Uranus.jpg */; };
 		0F1288D519B33A3700962710 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F1288CB19B33A3700962710 /* Venus.jpg */; };
 		0F1288D819B33A7400962710 /* DASpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1288D719B33A7400962710 /* DASpaceObject.m */; };
+		0F4578FC19BE3CD100263E35 /* DASpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4578FB19BE3CD100263E35 /* DASpaceDataViewController.m */; };
 		0FD13FDF19BDBE510029189E /* DASpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD13FDE19BDBE510029189E /* DASpaceImageViewController.m */; };
 		0FD1402619BDE4300029189E /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1402319BDE4300029189E /* Earth.jpg */; };
 		0FD1402719BDE4300029189E /* Mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1402419BDE4300029189E /* Mars.jpg */; };
@@ -78,6 +79,8 @@
 		0F1288CB19B33A3700962710 /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
 		0F1288D619B33A7400962710 /* DASpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASpaceObject.h; sourceTree = "<group>"; };
 		0F1288D719B33A7400962710 /* DASpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASpaceObject.m; sourceTree = "<group>"; };
+		0F4578FA19BE3CD100263E35 /* DASpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASpaceDataViewController.h; sourceTree = "<group>"; };
+		0F4578FB19BE3CD100263E35 /* DASpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASpaceDataViewController.m; sourceTree = "<group>"; };
 		0FD13FDD19BDBE510029189E /* DASpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASpaceImageViewController.h; sourceTree = "<group>"; };
 		0FD13FDE19BDBE510029189E /* DASpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASpaceImageViewController.m; sourceTree = "<group>"; };
 		0FD1402319BDE4300029189E /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				0F12885219B0DDCB00962710 /* DAAppDelegate.h */,
 				0F12885319B0DDCB00962710 /* DAAppDelegate.m */,
 				0F12885519B0DDCB00962710 /* Main.storyboard */,
+				0F4578FA19BE3CD100263E35 /* DASpaceDataViewController.h */,
+				0F4578FB19BE3CD100263E35 /* DASpaceDataViewController.m */,
 				0FD13FDD19BDBE510029189E /* DASpaceImageViewController.h */,
 				0FD13FDE19BDBE510029189E /* DASpaceImageViewController.m */,
 				0F12887819B0DE8500962710 /* DAOuterSpaceTableViewController.h */,
@@ -312,6 +317,7 @@
 				0F12885019B0DDCB00962710 /* main.m in Sources */,
 				0F12885419B0DDCB00962710 /* DAAppDelegate.m in Sources */,
 				0F12887D19B1EA1E00962710 /* AstronomicalData.m in Sources */,
+				0F4578FC19BE3CD100263E35 /* DASpaceDataViewController.m in Sources */,
 				0F1288D819B33A7400962710 /* DASpaceObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

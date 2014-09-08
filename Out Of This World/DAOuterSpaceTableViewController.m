@@ -10,7 +10,7 @@
 #import "AstronomicalData.h"
 #import "DASpaceObject.h"
 #import "DASpaceImageViewController.h"
-
+#import "DASpaceDataViewController.h"
 @interface DAOuterSpaceTableViewController ()
 
 @end
@@ -65,6 +65,15 @@
             nextViewController.spaceObject = selectedObject;
         }
     }
+    
+    if ([sender isKindOfClass:[NSIndexPath class]]) {
+        if ([segue.destinationViewController isKindOfClass:[DASpaceDataViewController class]]) {
+            DASpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            DASpaceObject *selectedObject =self.planets[path.row];
+            targetViewController.spaceObject = selectedObject;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,6 +118,12 @@
     return cell;
 }
 
+#pragma mark UITableView Delegates
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"push to space data" sender:indexPath];
+}
 
 /*
 // Override to support conditional editing of the table view.
